@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MercadoLearn: conoce la carrera de Mercadotecnia, sus áreas, oportunidades y aplicaciones.">
+  <title>MercadoLearn | Descubre la mercadotecnia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="descubre.html">Descubre más</a>
+      <a class="nav-link nav-cta" href="index.html#contacto">Agenda una cita ahora</a>
+    </nav>
+    <a class="brand" href="index.html" aria-label="MercadoLearn, inicio">
+      <span>MERCADOLEARN</span><span class="brand-cart" aria-hidden="true">🛒</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85" alt="Equipo creativo trabajando en una estrategia">
+      <div class="hero-shade"></div>
+      <h1>MERCADOTECNIA: Versatilidad, creatividad y<br class="desktop-only"> administración en un solo lugar.</h1>
+    </section>
+
+    <section class="intro container">
+      <div class="intro-copy">
+        <h2>HOLAAA</h2>
+        <p>¿Habías sabido qué quieres conocer y hacer este momento? ¡Infórmate con nosotros!</p>
+        <img class="marketing-image" src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1000&q=85" alt="Ideas y materiales de marketing">
+      </div>
+
+      <form class="appointment-form" id="cita">
+        <h2>Título del formulario</h2>
+        <label for="nombre">Tu nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" required>
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+        <label for="mensaje">¿Qué te gustaría conocer?</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tus dudas..."></textarea>
+        <button class="button" type="submit">Enviar solicitud</button>
+        <p class="form-note" id="form-message" aria-live="polite">* Formulario de demostración; conecta un servicio para recibir respuestas.</p>
+      </form>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow">HABLEMOS DE TU FUTURO</p>
+          <h2>¿Tienes dudas sobre Mercadotecnia?</h2>
+          <p>Escríbenos y conoce más sobre la carrera, sus materias y las oportunidades que ofrece.</p>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:hola@mercadolearn.com">hola@mercadolearn.com</a>
+          <a href="#cita">Solicitar información <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">MERCADOLEARN <span>Aprende. Crea. Conecta.</span></div>
+  </footer>
+
+  <script>
+    // Demostración visual: no envía datos a ningún servidor.
+    document.querySelector("#cita").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.querySelector("#form-message").textContent =
+        "¡Gracias! Tu solicitud quedó registrada en esta demostración.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
